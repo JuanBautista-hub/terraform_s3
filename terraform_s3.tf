@@ -9,20 +9,8 @@ resource "aws_s3_bucket" "example" {
   bucket = random_string.random.id
 
   tags = {
-    Name        = "My bucket"
-    Environment = "Dev"
+    Name        = var.tags_name
+    Environment = var.tags_Enviroment
   }
 }
 
-
-variable "acces_key" {
-  //enter console variable
-}
-
-variable "secret_key" {
-  //enter console variable
-}
-
-variable "region_aws" {
-  //enter console variable
-}
